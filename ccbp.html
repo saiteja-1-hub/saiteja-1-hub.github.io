@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+<style>  
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+.price{
+   font-weight: bold; 
+   font-family: Roboto;
+   margin-left: 15px;
+   
+}
+.ratting-container{
+    background-color: brown;
+    height: 20px;
+    width: 30px;
+}
+
+.ratting{
+    color: white;
+    font-weight: bold; 
+   margin-left: 15px;
+   font-size: 20px;
+}
+.bg-container {
+    background-color: #ffffff;
+    background-size: cover;
+}
+
+.top-background-image {
+    background-image: url("https://img.freepik.com/free-photo/tasty-pizza-near-ingredients_23-2147772080.jpg?w=1380&t=st=1693714847~exp=1693715447~hmac=7e983f1ac40d94ba4762f12035b787dda4818f25df58ba92337224a2786a4851");
+    height: 45vh;
+
+    color: #ffffff;
+    background-size: cover;
+
+}
+
+.top-heading {
+    font-family: "Bree serif";
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.top-paragraph {
+    text-align: center;
+    font-family: "Roboto";
+    padding: 2px;
+}
+
+.button {
+    background-color: #f5e642;
+    height: 30px;
+    width: 95px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 10px;
+    border-width: 0px;
+    margin: 5px;
+}
+
+.both-buttons {
+    margin: 15px;
+}
+
+.second-button {
+    border-radius: 10px;
+    height: 30px;
+    width: 95px;
+    margin: 5px;
+}
+
+.item-card {
+    background-color: #ebf5f5;
+    height: 240px;
+    width: 210px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.item-image {
+    background-size: cover;
+    height: 155px;
+    width: 160px;
+    margin-left: 24px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.item-heading {
+    color: #14a0e0;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.item-paragraph {
+    color: grey;
+    margin-left: 10px;
+}
+
+
+.foodie-fusion {
+    font-size: 60px;
+    color: black;
+    font-family: "Bree serif";
+    text-align: center;
+    font-style: italic;
+}
+
+.order-card {
+    background-color: #e6eff0;
+    height: 280px;
+    width: 220px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.order-image {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.off-paragraph {
+    background-color: blue;
+    color: white;
+    width: 70px;
+    font-family: "Roboto";
+}
+
+.ratting-paragraph {
+    font-size: 20px;
+    color: grey;
+}
+
+.item-name {
+    font-size: 25px;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin: 10px;
+}
+
+.price {
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.buy-button {
+    height: 35px;
+    margin-right: 20px;
+}
+
+.back-button {
+    margin: 20px;
+    width: 80px;
+}
+</style>
+</head>
+
+<body>
+
+    <div id="sectionHome">
+        <div class="bg-container">
+
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+                <a class="navbar-brand" href="#"> Get app </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"> Add Restaurent <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"> Log in </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"> Sign Up </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="top-background-image">
+
+                <div class="col-12 mt-5">
+                    <h1 class="top-heading"> TastyRoute </h1>
+                    <p class="top-paragraph"> Eat Smart & Health </p>
+                </div>
+
+            </div>
+
+            <div class="d-flex flex-row">
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table_141793-4757.jpg?w=1060&t=st=1698387763~exp=1698388363~hmac=b8a1ecf9561c5601447e028aed3e11f2832766cd8c9c6669a67ef1dd938177b5" class="item-image" />
+
+                    <h1 class="item-heading"> Non-Veg </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllNonVeg')"> View All -> </p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/fried-vegetables-with-sauce-pan_1220-5283.jpg?w=826&t=st=1699362284~exp=1699362884~hmac=5249097d4a14e41244c22c5b64276b2845791a284fa9020baad963c5bc0e4ef7" class="item-image" />
+
+                    <h1 class="item-heading"> Vegetables </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllVegetables')"> View All -> </p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/delicious-indian-dosa-arrangement_23-2149086027.jpg?w=360&t=st=1693886007~exp=1693886607~hmac=76cafb0214b4945c3de02dcd01ffc1753d7107460993b77352a009e92a338e6b" class="item-image" />
+
+                    <h1 class="item-heading"> Tiffens </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllTiffens')"> View All -> </p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=1060&t=st=1693886474~exp=1693887074~hmac=562c72c46481e589aef0903deacaa48b80806dd9ba90d16893aa5e0b6da2278d" class="item-image" />
+
+                    <h1 class="item-heading"> Pizza </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllPizzas')"> View All -> </p>
+                </div>
+
+            </div>
+
+            <div class="d-flex flex-row">
+
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/colorful-fruits-tasty-fresh-ripe-juicy-white-desk_179666-169.jpg?w=1060&t=st=1693741382~exp=1693741982~hmac=732812dbb30a67620762700d3159d8152018a8b4eeb1cfbb9a1fe4273b7c72b6" class="item-image" />
+
+                    <h1 class="item-heading"> Fruits </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllFruits')"> View All -> </p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/top-view-rice-with-carrot-cooked-with-lamb-served-with-yogurt-salad_141793-2449.jpg?w=1060&t=st=1693886694~exp=1693887294~hmac=d9853891a0864062f48de0acad68bd4e03f6bb426e473ed80d6a08ffda25af4f" class="item-image" />
+
+                    <h1 class="item-heading"> Biryani </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllBiryani')"> View All -> </p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://img.freepik.com/premium-photo/poori-masala-curry-aloo-sabzi-puri_466689-77499.jpg?w=1060" class="item-image" />
+
+                    <h1 class="item-heading"> Pani Poori </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllPaniPori')"> View All -> </p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai_188544-12302.jpg?w=1380&t=st=1693887262~exp=1693887862~hmac=7997ce5775d21cc9417f4423a8190b1f9cac233630eb3f318583cd56040bbb4e" class="item-image" />
+
+                    <h1 class="item-heading"> Burger </h1>
+                    <p class="item-paragraph" onclick="display('sectionViewAllBurgers')"> View All -> </p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div id="sectionViewAllNonVeg">
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table_141793-4757.jpg?w=1060&t=st=1693747458~exp=1693748058~hmac=2c697545861ff2e54e28505c5220d7e89929821236a2a83d224421ae11298b9c" class="order-image" />
+               
+                <h1 class="item-name"> Chicken <span class="ratting ratting-container">  4.2  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span> </h1>
+              
+                <p class="price"> Buy Rs 200/- </p>
+                
+                
+            </div>
+
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/top-view-delicious-fish-meal_23-2148734691.jpg?w=900&t=st=1693818873~exp=1693819473~hmac=b69cbdb978ad01daf8cbf7673c0cd37f38397a92df1e8d3f73e35cef749348da" class="order-image" />
+                <h1 class="item-name"> Fish <span class="ratting ratting-container">  4.0 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 150/- </p>
+              
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/premium-photo/manchurian-hakka-schezwan-noodles-popular-indochinese-food-served-bowl-selective-focus_466689-34621.jpg?w=1060" class="order-image" />
+                <h1 class="item-name"> Chicken Noodles <span class="ratting ratting-container">  4.5  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span> </h1>
+                 <p class="price"> Buy Rs 70/- </p>
+            </div>
+
+            <div class="order-card">
+                <img src="https://img.freepik.com/premium-photo/chicken-dhum-biriyani-using-jeera-rice-spices-arranged-earthen-ware_527904-513.jpg?w=1060" class="order-image" />
+                <h1 class="item-name"> Chicken Biriyani  
+              
+                <span class="ratting ratting-container">  4.0 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 100/- </p>
+
+            </div>
+        </div>
+
+
+        <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+    </div>
+
+    <div id="sectionViewAllVegetables">
+
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/ong-chili-paste-mortar-decorated-with-beautiful-side-dishes_1150-24469.jpg?w=1060&t=st=1695543134~exp=1695543734~hmac=38f36c80615d376c635727605290008186f4eb1ae8b2d042249df5531e7fa553" class="order-image" />
+                <h1 class="item-name"> Tomato <span class="ratting ratting-container">  4.9  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span> </h1>       
+                <p class="price"> Buy Rs 30/- </p>
+
+            </div>
+            <div class="order-card">
+                <img src="https://img.freepik.com/premium-photo/mix-vegetable-curry-indian-main-course-recipe-contains-carrots-cauliflower-green-peas-beans-baby-corn-capsicum-paneer-cottage-cheese-with-traditional-masala-curry_466689-36239.jpg?w=360" class="order-image" />
+                <h1 class="item-name"> Carrot <span class="ratting ratting-container">  4.6 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 30/- </p>
+                    
+                 </h1>
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/curry-with-chicken-onions-indian-food-asian-cuisine_2829-4415.jpg?w=996&t=st=1695543548~exp=1695544148~hmac=faed7519af00981f231a9f4c44f14c85011902b3b9484c0026a686518b8b0efa" class="order-image" />
+                <h1 class="item-name"> Alou  
+
+                <span class="ratting ratting-container">  4.0 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 35/- </p>
+
+            </div>
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/bowl-food-with-spoon-table-glass-orange-juice_1340-34219.jpg?t=st=1695543951~exp=1695547551~hmac=8ac7f3c4a5d7f31f0ca05df164eebeedbb7115aba98e27a2b9d5909ce06d0ed1&w=740" class="order-image" />
+                <h1 class="item-name"> Greenbeans 
+
+                    <span class="ratting ratting-container">  4.3 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 50/- </p>
+
+                </h1>
+            </div>
+        </div>
+        <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+    </div>
+
+    <div id="sectionViewAllTiffens">
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+
+        <div>
+            <div class="d-flex flex-row">
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/delicious-indian-dosa-arrangement_23-2149086027.jpg?w=360&t=st=1693886007~exp=1693886607~hmac=76cafb0214b4945c3de02dcd01ffc1753d7107460993b77352a009e92a338e6b" class="item-image" />
+                    <h1 class="item-heading"> Dosa  
+
+                    <span class="ratting ratting-container">  4.8 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 40/- </p>
+
+                </div>
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/yellow-delicious-cuscus-plate_1303-26177.jpg?w=740&t=st=1697606735~exp=1697607335~hmac=da327dd2177f7207057c1ff40b1b61df5480d10c29cfa4c47e4d980279c37f9a" class="item-image" />
+                    <h1 class="item-heading"> Upma    <span class="ratting ratting-container"> 4.6 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                         </span>
+                         </h1>
+                         <p class="price"> Buy Rs 40/- </p>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/delicious-indian-dosa-arrangement_23-2149086027.jpg?w=360&t=st=1693886007~exp=1693886607~hmac=76cafb0214b4945c3de02dcd01ffc1753d7107460993b77352a009e92a338e6b" class="item-image" />
+
+                    <h1 class="item-heading"> Dosa 
+                    <span class="ratting ratting-container">  4.6 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 40/- </p>
+
+                </div>
+                <div class="item-card">
+                    <img src="https://img.freepik.com/free-photo/yellow-delicious-cuscus-plate_1303-26177.jpg?w=740&t=st=1697606735~exp=1697607335~hmac=da327dd2177f7207057c1ff40b1b61df5480d10c29cfa4c47e4d980279c37f9a" class="item-image" />
+
+                    <h1 class="item-heading"> Upma  
+                    <span class="ratting ratting-container">   4.9 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 40/- </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+    </div>
+
+    <div id="sectionViewAllPizzas">
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=900&t=st=1697610100~exp=1697610700~hmac=470cd056d65700469d9c395f518a77a9e72667599e99e6f34f61be1de5e8c334" class="order-image" />
+                <h1 class="item-name"> vegetarian pizza  
+
+                <span class="ratting ratting-container">  4.6 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 40/- </p>
+
+            </div>
+
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/freshly-baked-pizza-rustic-wooden-table-generated-by-ai_24640-80691.jpg?t=st=1697570148~exp=1697573748~hmac=fd61564acf065592c23a9ab523ae4d0b7ae4cb53d276c3564fcc9948127d6019&w=1060" class="order-image" />
+                <h1 class="item-name"> BBQ Chicken Pizza  <span class="ratting ratting-container">  4.8 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 240/- </p>
+
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://media.istockphoto.com/id/1707255232/photo/potato-pizza-with-white-sauce.jpg?s=1024x1024&w=is&k=20&c=l6aPhZji1enTWB_ns9fwIvrqg4k-qfOvSv2NO36oQe0=" class="order-image" />
+
+                <h1 class="item-name"> White Pizza  <span class="ratting ratting-container">  4.2 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 160/- </p>
+
+            </div>
+            <div class="order-card">
+                <img src="https://media.istockphoto.com/id/1349383878/photo/hawaiian-pizza-with-ham-and-pineapple.jpg?s=1024x1024&w=is&k=20&c=9rl500mkuFp3o7XrBszJ9mm_if9yWRwdD2DP-uUrzl4=" class="order-image" />
+                <h1 class="item-name"> Hawaiian Pizza  <span class="ratting ratting-container">  4.7 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 120/- </p>
+            </div>
+        </div>
+        <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+
+    </div>
+
+    <div id="sectionViewAllFruits">
+
+
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-vector/realistic-orange-splash-fruit_52683-65283.jpg?w=740&t=st=1697608999~exp=1697609599~hmac=804626a92e36144b989f6518387dca22c68d6da291c66eba3394efeec6b7bbd5" class="order-image" />
+                <h1 class="item-name"> Oranges  <span class="ratting ratting-container">  4.3 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 30/- </p>
+
+            </div>
+
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/yellow-banana-fruit_1203-7489.jpg?w=900&t=st=1697609131~exp=1697609731~hmac=f5bc0651e5747428bae3d76711ca3e6b55e88e0a9b2ed5774122159d0fbd315e" class="order-image" />
+                <h1 class="item-name"> Banana <span class="ratting ratting-container">  4.4 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 30/- </p>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/apricots-wicker-baskets-wooden-table-side-view_176474-9167.jpg?w=996&t=st=1697609253~exp=1697609853~hmac=1c0c2d80027a61725a5b993ebecc85945893f452ac07d39e93aef185ae497757" class="order-image" />
+                <h1 class="item-name"> Mangoes  <span class="ratting ratting-container">  4.8 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 50/- </p>
+            </div>
+            <div class="order-card">
+                <img src="https://img.freepik.com/premium-photo/fresh-red-apple-fruit-with-sliced-green-leaves-isolated-white-background_252965-9.jpg?w=900" class="order-image" />
+                <h1 class="item-name"> Apple  <span class="ratting ratting-container">  4.9 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 30/- </p>
+            </div>
+        </div>
+
+        <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+
+    </div>
+
+    <div id="sectionViewAllBiryani">
+
+
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/plate-biryani-with-bowl-rice-bowl-food-table_505751-3814.jpg?t=st=1699361127~exp=1699364727~hmac=392791b716099419473e323c1d5579e651dd764eb1e6642bea48a2cabe315c93&w=900" class="order-image" />
+                <h1 class="item-name"> Hyderabadi Biryani  <span class="ratting ratting-container">  5.0
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 140/- </p>
+            </div>
+            <div class="order-card">
+                <img src="https://as1.ftcdn.net/v2/jpg/01/35/45/36/1000_F_135453699_VTRwi4EW86K5ct9dTEERpj9YkXYXAEEW.jpg" class="order-image" />
+                <h1 class="item-name"> Dum Biryani  <span class="ratting ratting-container">  4.9 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 120/- </p>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/plate-biryani-with-bunch-food-it_505751-3819.jpg?t=st=1699357929~exp=1699361529~hmac=2eb0a3ec13a0b7b9e8289d3977c1fdb77bc4866c2227588449d7048eb99bac33&w=900" class="order-image" />
+                <h1 class="item-name"> Kolkata Biryani  <span class="ratting ratting-container">  4.8 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 110/- </p>
+            </div>
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/gourmet-chicken-biryani-with-steamed-basmati-rice-generated-by-ai_188544-13480.jpg?t=st=1699358428~exp=1699362028~hmac=44863914c30f32544578965c0dcb980b8345f12e6426ff3122b2e1fadc5304f8&w=900" class="order-image" />
+                <h1 class="item-name"> Lucknowi biryan  <span class="ratting ratting-container">  4.7 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 100/- </p>
+            </div>
+        </div>
+
+
+        <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+
+    </div>
+
+    <div id="sectionViewAllPaniPori">
+
+
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/premium-photo/sev-puri_57665-3601.jpg?w=826" class="order-image" />
+                <h1 class="item-name"> PaniPori  <span class="ratting ratting-container">  4.9 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 40/- </p>
+            </div>
+
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/gourmet-lifestyle-cocina-yummy-foodie_1350-49.jpg?w=740&t=st=1701506854~exp=1701507454~hmac=955a2efb9d9336129bf01273402bf6308ee77a44efc49d8d59a2f7eb75483da8" class="order-image" />
+                <h1 class="item-name"> Bhel puri  <span class="ratting ratting-container">  5.0 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 30/- </p>
+
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/premium-photo/sev-puri_57665-9445.jpg?w=826" class="order-image" />
+
+                <h1 class="item-name"> Dahi puri  <span class="ratting ratting-container">  4.7 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 20/- </p>
+
+            </div>
+
+
+            <div class="order-card">
+                <img src="https://img.freepik.com/premium-photo/spicy-chotpot-masla-chaat-with-chana-chola-chilli-served-dish-isolated-table-top-view-indian-bangladeshi-pakistani-street-food_689047-4863.jpg?w=740" class="order-image" />
+                <h1 class="item-name"> Chotpoti  <span class="ratting ratting-container">  4.9 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 15/- </p>
+
+            </div>
+
+        </div>
+        <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+
+    </div>
+
+    <div id="sectionViewAllBurgers">
+        <h1 class="foodie-fusion"> TastyRoute </h1>
+        <div class="d-flex flex-row">
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/black-burger-served-with-fries_140725-1707.jpg?w=740&t=st=1699091729~exp=1699092329~hmac=a558f35f78a97e061a74111539bdb388b0b720aee2beaf94c13547414f86f530" class="order-image" />
+                <h1 class="item-name"> Beetroot burger  <span class="ratting ratting-container">  4.5 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 100/- </p>
+            </div>
+ 
+            <div class="order-card">
+                <img src="https://img.freepik.com/free-photo/black-burger-served-with-fries_140725-1707.jpg?w=740&t=st=1699091729~exp=1699092329~hmac=a558f35f78a97e061a74111539bdb388b0b720aee2beaf94c13547414f86f530" class="order-image" />
+                <h1 class="item-name"> Beetroot burger  <span class="ratting ratting-container">  4.2 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                 </span>
+                 </h1>
+                 <p class="price"> Buy Rs 110/- </p>
+            </div>
+
+            </div>
+            <div class="d-flex flex-row">
+                <div class="order-card">
+                    <img src="https://img.freepik.com/free-photo/black-burger-served-with-fries_140725-1707.jpg?w=740&t=st=1699091729~exp=1699092329~hmac=a558f35f78a97e061a74111539bdb388b0b720aee2beaf94c13547414f86f530" class="order-image" />
+                    <h1 class="item-name"> Beetroot burger  <span class="ratting ratting-container">  4.5 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 100/- </p>
+                </div>
+     
+                <div class="order-card">
+                    <img src="https://img.freepik.com/free-photo/black-burger-served-with-fries_140725-1707.jpg?w=740&t=st=1699091729~exp=1699092329~hmac=a558f35f78a97e061a74111539bdb388b0b720aee2beaf94c13547414f86f530" class="order-image" />
+                    <h1 class="item-name"> Beetroot burger  <span class="ratting ratting-container">  4.2 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                     </span>
+                     </h1>
+                     <p class="price"> Buy Rs 110/- </p>
+                </div>
+    
+                </div>
+                <button class="btn btn-primary back-button" onclick="display('sectionHome')"> Back </button>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
